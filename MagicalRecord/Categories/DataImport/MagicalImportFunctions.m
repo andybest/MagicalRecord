@@ -35,7 +35,7 @@ NSDate *MR_dateFromString(NSString *value, NSString *format, NSLocale *locale)
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setLocale:locale];
     [formatter setDateFormat:format];
     
     NSDate *parsedDate = [formatter dateFromString:value];
