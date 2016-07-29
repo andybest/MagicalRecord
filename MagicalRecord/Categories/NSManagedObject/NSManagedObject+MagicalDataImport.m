@@ -19,6 +19,7 @@
 #import <objc/runtime.h>
 
 NSString * const kMagicalRecordImportCustomDateFormatKey            = @"dateFormat";
+NSString * const kMagicalRecordImportCustomDateLocaleIdentifierKey  = @"localeIdentifier";
 NSString * const kMagicalRecordImportDefaultDateFormatString        = @"yyyy-MM-dd'T'HH:mm:ssz";
 NSString * const kMagicalRecordImportUnixTimeString                 = @"UnixTime";
 

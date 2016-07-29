@@ -9,6 +9,7 @@
 #import <MagicalRecord/MagicalRecordXcode7CompatibilityMacros.h>
 
 OBJC_EXPORT NSString * __MR_nonnull const kMagicalRecordImportCustomDateFormatKey;
+OBJC_EXPORT NSString * __MR_nonnull const kMagicalRecordImportCustomDateLocaleIdentifierKey;
 OBJC_EXPORT NSString * __MR_nonnull const kMagicalRecordImportDefaultDateFormatString;
 OBJC_EXPORT NSString * __MR_nonnull const kMagicalRecordImportUnixTimeString;
 OBJC_EXPORT NSString * __MR_nonnull const kMagicalRecordImportAttributeKeyMapKey;

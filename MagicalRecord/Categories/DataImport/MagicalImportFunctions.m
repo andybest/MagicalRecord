@@ -31,7 +31,7 @@ NSDate * MR_adjustDateForDST(NSDate *date)
     return actualDate;
 }
 
-NSDate * MR_dateFromString(NSString *value, NSString *format)
+NSDate *MR_dateFromString(NSString *value, NSString *format, NSLocale *locale)
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];

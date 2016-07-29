@@ -37,11 +37,21 @@
             if (![value isKindOfClass:[NSDate class]]) 
             {
                 NSString *dateFormat = [[self userInfo] objectForKey:kMagicalRecordImportCustomDateFormatKey];
+                NSString *localeIdentifier = [[self userInfo] objectForKey:kMagicalRecordImportCustomDateLocaleIdentifierKey];
+
+                NSLocale *locale;
+
+                if(localeIdentifier) {
+                    locale = [NSLocale localeWithLocaleIdentifier:localeIdentifier];
+                } else {
+                    locale = [NSLocale currentLocale];
+                }
+
                 if ([value isKindOfClass:[NSNumber class]]) {
                     value = MR_dateFromNumber(value, [dateFormat isEqualToString:kMagicalRecordImportUnixTimeString]);
                 }
                 else {
-                    value = MR_dateFromString([value description], dateFormat ?: kMagicalRecordImportDefaultDateFormatString);
+                    value = MR_dateFromString([value description], dateFormat ?: kMagicalRecordImportDefaultDateFormatString, locale);
                 }
             }
         }
